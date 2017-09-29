@@ -82,8 +82,18 @@ You'll need to install Python and a number of external modules on your machine t
 
 You can install Anaconda and the needed modules as follows: 
 
-- Download and install Anaconda (Python 2.7 version) -> [Download Anaconda](https://www.anaconda.com/download/) and double click it. You can accept the default choices. 
+- Download and install Anaconda (Python 2.7 version) -> [Download Anaconda](https://www.anaconda.com/download/) and double click it. You can accept the default choices.
 
+- Update Spyder: open a Anaconda prompt (`Start Menu` -> `Anaconda` -> `Anaconda Prompt`) and enter the following commands:
+
+    `conda update qt pyqt`
+    
+    press `Enter` to execute it.
+
+    `conda update spyder`
+    
+    press `Enter` to execute it.
+    
 - Install the `fiona` module: open a Anaconda prompt (`Start Menu` -> `Anaconda` -> `Anaconda Prompt`) and enter the following command:
 
     `conda install -c conda-forge fiona`
