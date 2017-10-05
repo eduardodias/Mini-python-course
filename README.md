@@ -47,19 +47,25 @@ To maximize the time available for the hands-on lectures and exercises we kindly
 2. log in and navigate to the [Python course](https://www.codecademy.com/learn/python)
 3. click `Start`
 
-Please complete the following exercises before coming to class on the 19th of September. 
+Please complete the following exercises before coming to class on the 6th of October. 
 
 - Unit 1 - [Lesson: Python Syntax](https://www.codecademy.com/courses/introduction-to-python-6WeG3/0/1)
-- Unit 2 - Lesson: Strings & Console Output
+- Unit 2 - Lesson: Strings & Console Outputer
 - Unit 3 - Lesson: Conditionals & Control Flow
 - Unit 4 - Lesson: Functions
 - Unit 5 - Lesson: Python Lists and Dictionaries
+
+and before October 10:
+- Unit 6
 - Unit 7 - Lesson: List and functions
 - Unit 8 - Lesson: Loops
-- (optional) Unit 10 - Lesson: Advanced Topics in Python
+
+Until October 13th (optional)
+- Unit 9
+- Unit 10 - Lesson: Advanced Topics in Python
 - Unit 12 - Lesson: File Input and Output
 
-Practice makes perfect: feel free to complete any of the other lessons and or exercises after you've gone through this list.
+Practice makes perfect!
 
 ## Lecture materials
 
