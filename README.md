@@ -6,9 +6,9 @@ Welcome to this mini Python course. In this course we'll take a small dive into 
 
 From previous iterations we've distilled that learning the basics isn't the challenge (anymore) due to the abundance of open online courses and interactive online tutorials. **Rather, the question is: how do I craft useful scripts that solve real-world problems?** 
 
-Hence, we'll show you how to **apply your knowledge** to the challenges you'd like to **address day-to-day activities**. Along the way, we'll show you how to solve common Python-related problems, give you tips-and-tricks about finding help and expanding Python's capabilities with external modules.
+Hence, we'll show you how to **apply your knowledge** to the challenges you'd like to **address in day-to-day activities**. Along the way, we'll show you how to solve common Python-related problems, give you tips-and-tricks about finding help and expanding Python's capabilities with external modules.
 
-This course is extremely hands-on: **we don't have slides or extensive lecture notes; we'll only show and execute Python code**. We think we can get away with this approach only because you'll have done the bulk of the learning by the time you join us on Tuesday class. 
+This course is extremely hands-on: **we don't have slides or extensive lecture notes; we'll only show and execute Python code**. We think we can get away with this approach only because you'll have done the bulk of the learning by the time you join us on Friday class. 
 
 Curious? Read on!
 
@@ -22,7 +22,7 @@ Curious? Read on!
 
 ## Methodology and programme
 
-This course consists of a self-learning part and two hands-on workshops. a short interactive lecture are planned for the mornings while the afternoons are filled with supervised practical assignments.
+This course consists of a self-learning part and two hands-on workshops. A short interactive lecture is planned at the start and then you continue with supervised practical assignments.
 
 The program is as follows:
  - self-study: [Python course on Codeacademy](https://www.codecademy.com/learn/python)
@@ -56,12 +56,12 @@ Please complete the following exercises before coming to class on the 6th of Oct
 - Unit 5 - Lesson: Python Lists and Dictionaries
 
 and before October 10:
-- Unit 6
+- Unit 6 - Lesson: Student becomes the teacher
 - Unit 7 - Lesson: List and functions
 - Unit 8 - Lesson: Loops
 
 Until October 13th (optional)
-- Unit 9
+- Unit 9 - Lesson: Exam Statistics
 - Unit 10 - Lesson: Advanced Topics in Python
 - Unit 12 - Lesson: File Input and Output
 
@@ -80,11 +80,11 @@ You can download the accompanying Python scripts as follows:
 1. scroll to the top of this page
 2. click on the green button labelled `Clone or download`
 3. click on `Download ZIP`
-4. Unzip the file you downloaded and load the `.py` scripts contained in one of the folders in your favourite editor.
+4. Unzip the file you downloaded and load the `.py` scripts contained in one of the folders in your favourite text editor program.
 
 ## Installing Python (Windows)
 
-You'll need to install Python and a number of external modules on your machine to run the example scripts and perform the exercises. To make it easier we will use a python distribution that already comes with a large number of modules that are useful for scientific computing, called Anaconda. We will use the 2.7 version, since it has better library support and it is the version used by GIS packages like ArcGIS and QGIS. Anaconda also comes with a module manager called Conda, which we will use to install a few modules.
+You'll need to install Python and a number of external modules on your machine to run the example scripts and perform the exercises. To make it easier we will use a python distribution that already comes with a large number of modules that are useful for scientific computing, called Anaconda. We will use the 2.7 version, since it has better library support and it is the version used by GIS software packages. Anaconda also comes with a module manager called Conda, which we will use to install a few modules.
 
 You can install Anaconda and the needed modules as follows: 
 
