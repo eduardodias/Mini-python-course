@@ -33,7 +33,7 @@ The program is as follows:
    - recap of workshop I, introduction to Twitter API and tweepy
    - practical assignment - using the Twitter API, with the tweepy module
 
-Each interactive session + practical assignment pair is accompanied by a short manual and some Python scripts, see the [lecture materials](https://github.com/clucas111/gi-minor-python-course#lecture-materials) section below for more information. 
+Each interactive session + practical assignment pair is accompanied by a short manual and some Python scripts, see the [lecture materials](https://github.com/eduardodias/Mini-python-course#lecture-materials) section below for more information. 
 
 ## Self-study: codeacademy.com
 
@@ -65,9 +65,9 @@ Practice makes perfect: feel free to complete any of the other lessons and or ex
 
 The lecture notes are split in three chapters. Each chapter contains a short manual and one or more Python scripts. 
 
-- [Chapter 1 - recap](https://github.com/clucas111/gi-minor-python-course/tree/master/1_recap) - recap of the Codeacademy material you studied by yourself.
-- [Chapter 2 - Amsterdam API](https://github.com/clucas111/gi-minor-python-course/tree/master/2_AmsterdamAPI) - describes the Amsterdam API assignment + hints/tips/tricks about using an API.
-- [Chapter 3 - Twitter API](https://github.com/clucas111/gi-minor-python-course/tree/master/3_TwitterAPI) - describes the Twitter API assignment + hints/tips/tricks about using the Twitter API.
+- [Chapter 1 - recap](https://github.com/eduardodias/Mini-python-course/tree/master/1_recap) - recap of the Codeacademy material you studied by yourself.
+- [Chapter 2 - Amsterdam API](https://github.com/eduardodias/Mini-python-course/tree/master/2_AmsterdamAPI) - describes the Amsterdam API assignment + hints/tips/tricks about using an API.
+- [Chapter 3 - Twitter API](https://github.com/eduardodias/Mini-python-course/tree/master/3_TwitterAPI) - describes the Twitter API assignment + hints/tips/tricks about using the Twitter API.
 
 You can download the accompanying Python scripts as follows:
 
@@ -125,7 +125,7 @@ print 'Everything works!'
 
 ## Getting help
 
-Please use the [issue tracker](https://github.com/clucas111/gi-minor-python-course/issues) to post questions about the lecture notes, examples, exercises and Python in general or in case you're having difficulties installing Python. 
+Please use the [issue tracker](https://github.com/eduardodias/Mini-python-course/issues) to post questions about the lecture notes, examples, exercises and Python in general or in case you're having difficulties installing Python. 
 
 1. scroll to the top of this page and click on `Issues`
 2. click on the green button labelled `New issue`
