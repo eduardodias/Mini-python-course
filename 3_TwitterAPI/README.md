@@ -60,9 +60,9 @@ Task 5. Do some spatial analysis in ArcMap
 
 1. Similar to previous assignment, use fiona to create a point shapefile with the tweets. Think of which information to save in the attribute table.
 
-## Spatial analysis in ArcMap
+## Spatial analysis in ArcGIS Online
 
-1. Import the shapefile into ArcMap.
+1. Import the shapefile into ArcGIS Online.
 
 2. Explore the data.
 

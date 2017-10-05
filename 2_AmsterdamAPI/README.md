@@ -57,15 +57,13 @@ print(r.content)
 
 3. Open `photo_location.py`. Create a python script which retrieves a photo based on a location and save the photo and a shapefile with the location to the hard disk. The `.py` file contains pointers and hints to help you.
 
-4. Load the shapefile into ArcMap and make the point clickable, linking to the photo, by creating a hyperlink based on a field (path to the photo on the hard disk) in the shapefile. HINT: The ability to create a hyperlink based on a field is given in the `Display` tab of the `Layer Properties`. To be able to click on the point enable hyperlink mode by clicking on the lightning bolt icon on the toolbar:
-
-    ![alt text](hyperlink.png "Hyperlink Mode")
+4. Load the shapefile into ArcGIS Online to check the location. (Make to point clickable???)
 
 ## Retrieving larger amounts of data (optional)
 
 1. Open `photo_pages.py`. Create a python script which retrieves the first 5 pages of photos made in 2016. Also think about how you could make a script that downloads all photos of 2016 (don't run it because its a large amount of data and will take a long time). Again save the photos and a shapefile with the locations to the hard disk.
 
-2. Load the shapefile into ArcMap and make the photo locations clickable.
+2. Load the shapefile into ArcGIS Online (and make the photo locations clickable???)
 
 ## Retrieving a series of photos (optional)
 
