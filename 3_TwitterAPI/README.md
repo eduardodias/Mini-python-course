@@ -22,7 +22,7 @@ Task 3. Use a cursor to retrieve tweets from Amsterdam with a geotag
 
 Task 4. Export the tweets to a shapefile
 
-Task 5. Do some spatial analysis in ArcMap
+Task 5. Do some spatial analysis in Arcgis
 
 ## Setting up a Twitter (Dev) account
 
