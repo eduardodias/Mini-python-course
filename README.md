@@ -141,7 +141,7 @@ Please use the [issue tracker](https://github.com/eduardodias/Mini-python-course
  
 We encourage you to use the issue tracker as it 
 
-- the act of verbalizing your problem often times leads you to a solution
+- the act of verbalizing your problem often leads you to a solution
 - is a nice collaborative learning mechanism: seeing other people's questions is a sure way to learn something new and unexpected
 - saves you a lot of time in case someone else has posted your question already
 - saves us a lot of time since we don't have to answer each question separately (through mail)
@@ -153,5 +153,4 @@ We encourage you to use the issue tracker as it
 - Eduardo Dias
 - Simeon Nedkov
 - Brian de Vogel
-- Mark Opmeer
 - Chris Lucas
