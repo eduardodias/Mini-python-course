@@ -29,7 +29,7 @@ import requests
 
 Then we request data using a url (in this case a website):
 ```python
-r = requests.get('https://github.com/clucas111/gi-minor-python-course')
+r = requests.get('https://github.com/eduardodias/Mini-python-course')
 ```
 
 The website (html file) is now stored in the response object `r`. You can see the content as follows:
@@ -57,7 +57,7 @@ print(r.content)
 
 3. Open `photo_location.py`. Create a python script which retrieves a photo based on a location and save the photo and a shapefile with the location to the hard disk. The `.py` file contains pointers and hints to help you.
 
-4. Load the shapefile into ArcGIS Online to check the location. (Make to point clickable???)
+4. Load the shapefile into ArcGIS Online to check the location. if you save the url of the photo as an attribute of the shape you can open it directly from the map.
 
 ## Retrieving larger amounts of data (optional)
 
