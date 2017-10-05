@@ -2,7 +2,7 @@
 
 Data gets made available in different ways. Sometimes, for example, you simply go to a website and click a download link, sometimes you need to scrape it off a website, and sometimes you can use an API (application programming interface). An API is a set of definitions and methods for different computer software to communicate with each other. It is a general term, but in the context of data acquisition an API makes it easier to retrieve data in an automatic way. To make use of this automation we need a way to tell the computer how to use the API. This can be done using various tools and/or programming languages. We will use python to this end, since it is a very accessible and flexible programming langauge, with a lot of modules available able to provide a broad range of extra functionality. Python is also the programming language used by GIS packages such as ArcGIS (arcpy) and QGIS.
 
-As a data source to practice with we are going to use an API of the municipality of Amsterdam. They publish different kinds of data through API's, which are listed at https://api.data.amsterdam.nl/api/. We will use the panorama photo API to retrieve 360 panorama photos taken from a car driving through Amsterdam. The techniques used in this exercise can also be used to download data from the other API's from Amsterdam, and many many more API's from other sources.
+As a data source to practice with we are going to use an API of the municipality of Amsterdam. They publish different kinds of data through API's, which are listed at https://api.data.amsterdam.nl/api/. We will use the panorama photo API to retrieve 360 panorama photos taken from a car driving through Amsterdam (these are the same photos Mapillary used for their amsterdam collection). The techniques used in this exercise can also be used to download data from the other API's from Amsterdam, and many many more API's from other sources.
 
 ## Assignment
 
@@ -10,7 +10,7 @@ Task 1. Download a single panorama photo through the API
  
 Task 2. Download a photo based on a location through the API, save its location in a shapefile, and create a usable hyperlink to the photo in ArcMap
 
-Task 3. Download the first 5 pages of photos. Save the locations in a shapefile, import into ArcMap and create hyperlinks to open them.
+Task 3. (optional) Download the first 5 pages of photos. Save the locations in a shapefile, import into ArcMap and create hyperlinks to open them.
 
 Task 4. (optional) Download a series of photos in a single street.
 
