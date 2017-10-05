@@ -5,54 +5,60 @@ from fiona.crs import from_epsg
 # documentation: http://toblerity.org/fiona/manual.html
 
 
-cwd = "C:\\Projects\\SPINLab\\GI-minor\\gi-minor-python-course\\2_AmsterdamAPI"
-
 ## request a photo from a certain location
-    # choose a location (for example of your house, or near the university)
-    # and find out the latitude and longitude.
+    # choose a location (for example of your house, or near the university),
+    # make sure it's on a road and find out the latitude and longitude.
     # use this latitude and longitude to request a photo.
     # save the photo the the hard disk, like we did before.
     # HINT: look at https://api.data.amsterdam.nl/panorama/opnamelocatie/
-    # for accpeted parameters
+    # for accepted parameters
     # HINT: look in the `requests` module documentation how to add parameters
     # to a request
-loc = {'lat': '52.362951', 'lon': '4.928977'}
-response = requests.get('https://api.data.amsterdam.nl/panorama/opnamelocatie/', params=loc)
+loc = {.....?}
+response = requests.get(.....?, params=.....?)
 response_dict = response.json()
 
-url = response_dict['image_sets']['equirectangular']['full']
-image = requests.get(url)
+# Lookup the image url in the response dictionary
+# as you have done in the previous exercise.
+# Get the image in the same way as in the previous exercise
+url = .....?
+image_response = .......?
+image = ......?
 
-filename = 'data\\' + response_dict['filename']
-with open(filename, 'wb') as f:
-    f.write(image.content)
+# Save the image to the hard disk. Again, look in the previous
+# exercise how you did it.
+filename = .......?
+output_file = open(......?)
+output_file.write(......?)
+output_file.close()
 
-## create a shapefile with the location of the photo using fiona
-    # first define the coordinate reference system (CRS)
-    # using the `from_epsg` function imported from `fiona.crs`.
-    # HINT: the correct epsg code can be found using Google.
-    # which coordinate reference system are we dealing with?
-crs = from_epsg(4326)
-    # Then define the schema. The schema defines how the shapefile
-    # is structured. It defines the type of geometry and the
-    # properties of each entry.
-    # HINT: look in the `fiona` documentation
-    # HINT: think of what properties we should save with the points
+
+## We are going to create a shapefile with the location of the photo using fiona
+# first we need to define the coordinate reference system (CRS) and
+# define how the shapefile is structured.
+# The CRS we define using the from_epsg function provided by fiona. This 
+# function sets the CRS using an EPSG code, which can be found online.
+# In our case we are using WSG84. Lookup the EPSG code for WSG84 and
+# enter it.
+crs = from_epsg(.....?)
+# Then we define the schema. The schema defines how the shapefile
+# is structured. It defines the type of geometry and the
+# properties of each entry.
+# The geometry we need now is a Point. The properties we save with
+# each point are the path to the image and the time the photo has
+# been taken.
 schema = {'geometry': 'Point',
           'properties': {'Path': 'str',
-                         'Name': 'str',
-                         'DateTime': 'datetime'}}
-    # Open a shapefile using fiona
-    # HINT: use fiona.open(..)
-    # HINT: pass in the schema and crs we created
-shp_filepath = 'data\\photo_location.shp'
-with fiona.open(shp_filepath, 'w', 'ESRI Shapefile',
-                schema=schema, crs=crs) as shp:
-    # write the point to the shapefile
-    # HINT: pass in the geometry found in the response dictionary
-    # HINT: pass in the properties found in the response dictionary
-    # corresponding to the schema we defined
-    shp.write({'geometry': response_dict['geometrie'],
-               'properties': {'Path': cwd + '\\' + filename,
-                              'Name': response_dict['filename'],
-                              'DateTime': response_dict['timestamp']}})
+                         'DateTime': 'str'}}
+# Next we open a shapefile using fiona and we pass in the schema and 
+# CRS as we defined. 
+shp = fiona.open('photo_location.shp', 'w', 'ESRI Shapefile', schema=schema, crs=crs)
+# Now we write the data to the shapefile
+# The coordinates are located in the response dictionary.
+# You can use the variable explorer to see what's going on
+# in the response dictionary.
+shp.write({'geometry': response_dict['geometrie'],
+           'properties': {'Path': 'file://' + 'C:/asdfasdf/asdfasdf......?' + filename,
+                          'DateTime': response_dict['timestamp']}})
+# Lastly we close the shapefile
+shp.close()

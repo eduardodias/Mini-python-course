@@ -61,7 +61,7 @@ print(r.content)
 
     ![alt text](hyperlink.png "Hyperlink Mode")
 
-## Retrieving larger amounts of data
+## Retrieving larger amounts of data (optional)
 
 1. Open `photo_pages.py`. Create a python script which retrieves the first 5 pages of photos made in 2016. Also think about how you could make a script that downloads all photos of 2016 (don't run it because its a large amount of data and will take a long time). Again save the photos and a shapefile with the locations to the hard disk.
 
