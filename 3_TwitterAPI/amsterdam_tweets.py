@@ -9,11 +9,10 @@ access_token = ''
 access_token_secret = ''
 
 # Create an OAuth authentication object
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
+auth =
 
 # Create a tweepy API object, using the OAuth object
-api = tweepy.API(auth)
+api =
 
 # Test the connection
 user = api.me()
@@ -32,6 +31,7 @@ amsterdam = places[0]
 # To get the id from this variable we use the folowing command:
 amsterdam_id = amsterdam.id
 
+
 # Create the query (search text) HINT: To search based on a Twitter place ID search for
 # "place:`ID`", replacing `ID` with the ID found of the place.
 # Since we saved the ID in the variable amsterdam_id we need to insert this variable
@@ -39,7 +39,7 @@ amsterdam_id = amsterdam.id
 # Check if the query works by entering it in the search bar on the twitter website:
 # https://twitter.com/search-home
 # You should see tweets located in Amsterdam
-query = "place:{}".format(amsterdam_id)
+query =
 
 # Create a tweepy cursor. A cursor is an object that points to other objects, which you
 # can iterate through. In our case the cursor will point to the recent 1000 tweets
@@ -48,24 +48,29 @@ query = "place:{}".format(amsterdam_id)
 # that need to be passed into said method.
 # HINT: Use the tweepy documentation online (http://docs.tweepy.org/en/v3.5.0/api.html) to find
 # out which api method you need to search for tweets and which argument you have to use to pass in the query.
-tweet_cursor = tweepy.Cursor(api.search, q=query).items(1000)
+
 
 # To save all tweets with coordinates we loop through all and add the tweets with
 # coordinates to a list.
 
-tweets = []
 
-for tweet in tweet_cursor:
+
+
+for tweet in ...?:
     # We can convert the tweet to a dictionary using _json
     tweet_dict = tweet._json
     # HINT: Print a tweet dictionary, where is the location saved?
     # HINT: Use an if statement to check if the coordinates are present.
-    if tweet_dict["coordinates"] is not None:
+    if ...?:
         # append the tweet to the lift if it has coordinates. Look at the recap to see
         # how to append a value to a list
-        tweets.append(tweet_dict)
 
 
+
+# Save to a shapefile using the fiona module similar to the previous assignment.
+# Think about which information you want to save to the properties of each point.
+# HINT: look in the tweet list and pick a tweet. Look in the dictionary which properties are available.
+# Also think about the coordinate system we are using and adjust the crs accordingly if needed.
 # Save to a shapefile using the fiona module similar to the previous assignment.
 # Think about which information you want to save to the properties of each point.
 # HINT: look in the tweet list and pick a tweet. Look in the dictionary which properties are available.
