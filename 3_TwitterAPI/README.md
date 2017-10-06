@@ -1,10 +1,10 @@
 ## Chapter 3. Twitter API
 
-Another interesting API is the one from Twitter. Tweets can be a great source of information on range of topics. It has, for example, been used in [mapping natural disasters](http://www.ra.ethz.ch/CDStore/www2010/www/p851.pdf), [predicting the stock market](https://arxiv.org/pdf/1010.3003&), [mapping the aurora borealis](http://onlinelibrary.wiley.com/doi/10.1002/2015GL063709/full), [predicting election results](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM10/paper/viewFile/1441/1852), and [assessing public health](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM11/paper/viewFile/2880/3264).
+Another interesting API is the Twitter API. Tweets can be a great source of information on range of topics. It has, for example, been used in [mapping natural disasters](http://www.ra.ethz.ch/CDStore/www2010/www/p851.pdf), [predicting the stock market](https://arxiv.org/pdf/1010.3003&), [mapping the aurora borealis](http://onlinelibrary.wiley.com/doi/10.1002/2015GL063709/full), [predicting election results](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM10/paper/viewFile/1441/1852), and [assessing public health](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM11/paper/viewFile/2880/3264).
 
 The twitter API can be used both for posting tweets and searching for tweets, as well as a range of other twitter features. Since we are interested in twitter data, the search function is what we are interested in. When searching for tweets the API is limited to recent messages. If historical data is required you would need to purchase it from an archive like [Gnip](https://gnip.com/historical/). A way to generate your own dataset would be to set up a [listener](http://tweepy.readthedocs.io/en/v3.5.0/streaming_how_to.html), which will download tweets you are looking for as they get posted. The more time passes the bigger the dataset becomes. Since we don't have the time to set this up and wait for data to come in, today we are limited to recent tweets.
 
-As before our research area is going to be Amsterdam. To be able to use tweets as geographical data we need tweets with a precise location. Sadly for us (but perhaps good for privacy) tweets only contain a precise location (geotag) if the user chooses to provide it. Consequently only a fraction of the tweets contain a latitude and longitude. Though even if they don't have a precise location the general area can be known, so tweets can be linked to Amsterdam without having this geotag. Consequently even if we limit ourselves to a geographical area like Amsterdam most tweets will not have a geotag. We will have to make do with the data available.
+As before, our research area is going to be Amsterdam. To be able to use tweets as geographical data we need tweets with a precise location. Sadly for us (but perhaps good for privacy) tweets only contain a precise location (geotag) if the user chooses to provide it. Consequently only a fraction of the tweets contain a latitude and longitude. Though even if they don't have a precise location the general area can be known, so tweets can be linked to Amsterdam without having this geotag. Consequently even if we limit ourselves to a geographical area like Amsterdam most tweets will not have a geotag. We will have to make do with the data available.
 
 Because we are limited by time (only recent tweets), by location (only Amsterdam) and by the requirement of an available geotag, we have a limited number of usable tweets to work with. Consequently we can not further filter tweets by a subject (via a hashtag, for example). Therefore we have to keep this assignment more general. We will look how tweets are distributed over Amsterdam and if we can find some event by analysing the tweets (multiple people tweeting about the same thing).
 
@@ -13,6 +13,7 @@ The Twitter API is not an open API like the one from the municipality from Amste
 We could use the `requests` module as we did with the Amsterdam API, but it would require quite a bit of set up and going through the API documentation. Luckily there are modules made specifically for the Twitter API. One of those modules is `tweepy`, which is the library we are going to use today.
 
 ## Assignment
+Task 0. Install Tweepy (python library to use twitter).
 
 Task 1. Setup a Twitter (Dev) account
 
@@ -23,6 +24,33 @@ Task 3. Use a cursor to retrieve tweets from Amsterdam with a geotag
 Task 4. Export the tweets to a shapefile
 
 Task 5. Do some spatial analysis in Arcgis
+
+
+## Install the `tweepy` module:
+
+1. Open a Anaconda prompt (`Start Menu` -> `Anaconda` -> `Anaconda Prompt`) and enter the following command:
+
+    `conda install -c conda-forge tweepy`
+
+    press `Enter` to execute it.
+
+
+2. Test if everything works: 
+- start the Python editor `Spyder` (`Start Menu` -> `Anaconda` -> `Spyder`)
+- copy/paste the following code into the newly opened editor
+
+```python
+import tweepy
+print 'Everything works!'
+```
+- save the file: `File` -> `Save`
+- run the code: `Run` -> `Run`
+- do you see `Everything works!` in the ouput screen? Great, you're all set!
+- do you see something else? Too bad, something's wrong. Please copy/paste the output in the issue tracker (see below for instructions) and we'll try to assist you.
+
+
+Note: If you ever want to install other modules just Google `conda *module name*` and look for the result (with `Anaconda Cloud` in the title) with the latest version available for your platform. Copy the text under `To install this package with conda run one of the following:` and enter this command in the Anaconda prompt.
+
 
 ## Setting up a Twitter (Dev) account
 
