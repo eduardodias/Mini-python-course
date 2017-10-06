@@ -90,44 +90,6 @@ You can install Anaconda and the needed modules as follows:
 
 - Download and install Anaconda (Python 2.7 version) -> [Download Anaconda](https://www.anaconda.com/download/) and double click it. You can accept the default choices.
 
-- Update Spyder: open a Anaconda prompt (`Start Menu` -> `Anaconda` -> `Anaconda Prompt`) and enter the following commands:
-
-    `conda update qt pyqt`
-    
-    press `Enter` to execute it.
-
-    `conda update spyder`
-    
-    press `Enter` to execute it.
-    
-- Install the `fiona` module: open a Anaconda prompt (`Start Menu` -> `Anaconda` -> `Anaconda Prompt`) and enter the following command:
-
-    `conda install -c conda-forge fiona`
-
-    press `Enter` to execute it.
-
-- Install the `tweepy` module: open a Anaconda prompt (`Start Menu` -> `Anaconda` -> `Anaconda Prompt`) and enter the following command:
-
-    `conda install -c conda-forge tweepy`
-
-    press `Enter` to execute it.
-
-- If you ever want to install other modules just Google `conda *module name*` and look for the result (with `Anaconda Cloud` in the title) with the latest version available for your platform. Copy the text under `To install this package with conda run one of the following:` and enter this command in the Anaconda prompt.
-
-Test if everything works: 
-- start the Python editor `Spyder` (`Start Menu` -> `Anaconda` -> `Spyder`)
-- copy/paste the following code into the newly opened editor
-
-```python
-import fiona
-import tweepy
-
-print 'Everything works!'
-```
-- save the file: `File` -> `Save`
-- run the code: `Run` -> `Run`
-- do you see `Everything works!` in the ouput screen? Great, you're all set!
-- do you see something else? Too bad, something's wrong. Please copy/paste the output in the issue tracker (see below for instructions) and we'll try to assist you.
 
 ## Getting help
 
