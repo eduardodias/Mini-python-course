@@ -1,6 +1,4 @@
 import tweepy
-import fiona
-from fiona.crs import from_epsg
 
 # Consumer keys and access tokens, used for OAuth. Fill in your personal keys.
 consumer_key = ''
@@ -48,13 +46,11 @@ query =
 # that need to be passed into said method.
 # HINT: Use the tweepy documentation online (http://docs.tweepy.org/en/v3.5.0/api.html) to find
 # out which api method you need to search for tweets and which argument you have to use to pass in the query.
-
+tweet_cursor = 
 
 # To save all tweets with coordinates we loop through all and add the tweets with
 # coordinates to a list.
-
-
-
+tweet_list = []
 
 for tweet in ...?:
     # We can convert the tweet to a dictionary using _json
@@ -67,28 +63,16 @@ for tweet in ...?:
 
 
 
-# Save to a shapefile using the fiona module similar to the previous assignment.
-# Think about which information you want to save to the properties of each point.
-# HINT: look in the tweet list and pick a tweet. Look in the dictionary which properties are available.
-# Also think about the coordinate system we are using and adjust the crs accordingly if needed.
-# Save to a shapefile using the fiona module similar to the previous assignment.
-# Think about which information you want to save to the properties of each point.
-# HINT: look in the tweet list and pick a tweet. Look in the dictionary which properties are available.
-# Also think about the coordinate system we are using and adjust the crs accordingly if needed.
 
-crs = from_epsg(4326)
-schema = {'geometry': 'Point',
-          'properties': {'Text': 'str',
-                         'DateTime': 'str',
-                         'User': 'str'}}
+# Save the url along with the coordinates to a csv file.
+csv_file = open("tweets.csv", "w")
+# Write the column names in the first line
+csv_file.write("text,time,user,lat,lon\n")
 
-shp_filepath = 'tweet_locations_.shp'
+for tweet in tweets:
+    # Write the data to the csv file
+    # HINT: look in the tweet list and pick a tweet.
+    # Look in the dictionary which properties are available.
+    csv_file.write(url + "," + tweet[....?] + "," + tweet[....?][....?] + "," + tweet[....?][....?][....?] + "," + tweet[....?][....?][....?] + "\n"))
 
-with fiona.open(shp_filepath, 'w', 'ESRI Shapefile',
-                schema=schema, crs=crs) as shp:
-
-    for tweet in tweets:
-        shp.write({'geometry': tweet["coordinates"],
-                   'properties': {'Text': tweet["text"],
-                                  'DateTime': tweet["created_at"],
-                                  'User': tweet["user"]["name"]}})
+csv_file.close()
