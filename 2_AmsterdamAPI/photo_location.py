@@ -10,21 +10,21 @@ import requests
 # for accepted parameters
 # HINT: look in the `requests` module documentation how to add parameters
 # to a request
-loc = {.....?}
-response = requests.get(.....?, params=.....?)
+loc = {'lat': '52.362951', 'lon': '4.928977'}
+response = requests.get('https://api.data.amsterdam.nl/panorama/opnamelocatie/', params=loc)
 response_dict = response.json()
 
-# Lookup the image url, time, and coordiantes in the response 
+# Lookup the image url, time, and coordiantes in the response
 # dictionary as you have done in the previous exercise.
-url = .....?
-time = .....?
-latitude = .....?
-longitude = .....?
+url = response_dict['image_sets']['equirectangular']['full']
+time = response_dict['timestamp']
+latitude = response_dict['geometrie']['coordinates'][1]
+longitude = response_dict['geometrie']['coordinates'][0]
 
 # Save the url along with the coordinates to a csv file.
 csv_file = open("photo_location.csv", "w")
 # Write the column names in the first line
 csv_file.write("url,lat,lon,time\n")
 # Write the data to the csv file
-csv_file.write(url + "," + str(latitude) + "," + str(longitude) + "," + time + "\n"))
+csv_file.write(url + "," + str(latitude) + "," + str(longitude) + "," + time + "\n")
 csv_file.close()
