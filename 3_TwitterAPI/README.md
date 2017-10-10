@@ -12,7 +12,7 @@ The Twitter API is not an open API like the one from the municipality from Amste
 
 We could use the `requests` module as we did with the Amsterdam API, but it would require quite a bit of set up and going through the API documentation. Luckily there are modules made specifically for the Twitter API. One of those modules is `tweepy`, which is the library we are going to use today.
 
-## Assignment
+## Assignment Summary (Detailed instructions below)
 Task 0. Install Tweepy (python library to use twitter).
 
 Task 1. Setup a Twitter (Dev) account
