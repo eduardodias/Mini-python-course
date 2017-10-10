@@ -56,7 +56,7 @@ Note: If you ever want to install other modules just Google `conda *module name*
 
 1. Create Twitter account (if you do not already have one).
 
-2. Join dev.twitter.com.
+2. Join apps.twitter.com.
 
 3. Create an app (`My Apps` -> `Create New App`).
 
